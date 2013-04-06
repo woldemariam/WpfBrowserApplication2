@@ -1,0 +1,23 @@
+﻿<Page x:Class="WpfBrowserApplication1.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Page1">
+    <Grid Background="Silver">
+        <Grid Width="415">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="287*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="0*" />
+                <ColumnDefinition Width="0*" />
+                <ColumnDefinition Width="11*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock FontSize="18" TextWrapping="Wrap" Text="Welcome to Beverly Hill Online Grocery Services. We pride ourselves in providing the best service and products to you that will meet or exceed your expectation. Please note that we do not service areas outside of the 90210, 90211, 90212 zip code at this time. If you wish to proceed, please click enter. " HorizontalAlignment="Center" Margin="25,6,36,0" Width="336" Height="199" VerticalAlignment="Top"></TextBlock>
+            <Button Content="Enter" Height="19" HorizontalAlignment="Left" Margin="158,211,0,0" Name="button1" VerticalAlignment="Top" Width="72" Click="Button_Click" />
+        </Grid>
+
+    </Grid>
+</Page>
