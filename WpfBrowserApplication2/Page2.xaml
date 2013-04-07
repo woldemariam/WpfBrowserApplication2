@@ -48,7 +48,9 @@
         <Label FontSize="10" Content="Phone Number" Margin="60,0,261,99" Height="24" VerticalAlignment="Bottom" Grid.Column="4" Grid.Row="1"></Label>
         <TextBox Name="c6" FontSize="10" Margin="145,114,131,102" Grid.Column="4" Grid.Row="1" TabIndex="2"></TextBox>
         <Label FontSize="10" Content="Date of Birth" Margin="238,0,71,99" Height="24" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"></Label>
-        <TextBox FontSize="10" Margin="313,116,390,100" Grid.Column="1" Grid.Row="1" TabIndex="1" Grid.ColumnSpan="4"></TextBox>
+
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="313,116,390,100" Grid.Column="1" Grid.Row="1" TabIndex="1" Grid.ColumnSpan="4" Name="datePicker1"
+            VerticalAlignment="Top" Width="115" />
         <Label FontSize="10"  Content="Credit Card to be Placed on File" Margin="0,230,150,6" Grid.Column="1" HorizontalAlignment="Right" Width="168" Grid.Row="1" Grid.RowSpan="5"></Label>
         <TextBox Name="zip" IsReadOnly="True" FontStyle="Italic" Text="               Beverly Hill Online Grocery Services" FontSize="10" Margin="0,197,272,3" Grid.Column="1" HorizontalAlignment="Right" Width="255" Grid.Row="7" Grid.ColumnSpan="4"></TextBox>
         <Label FontSize="10"  Content="Credit Card Number" Margin="10,0,0,214" Grid.Column="1" HorizontalAlignment="Left" Width="103" Grid.Row="6" Grid.RowSpan="2"></Label>
