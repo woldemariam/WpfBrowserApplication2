@@ -46,7 +46,7 @@
         <Label FontSize="10"  Content="Zip Code" Margin="0,183,151,33" Grid.Column="4" HorizontalAlignment="Right" Width="63" Grid.Row="1"></Label>
         <TextBox Name="c5" FontSize="10" Margin="0,185,78,30" Grid.Column="4" HorizontalAlignment="Right" Width="81" Grid.Row="1" TabIndex="6"></TextBox>
         <Label FontSize="10" Content="Phone Number" Margin="60,0,261,99" Height="24" VerticalAlignment="Bottom" Grid.Column="4" Grid.Row="1"></Label>
-        <TextBox Name="c6" FontSize="10" Margin="145,114,131,102" Grid.Column="4" Grid.Row="1" TabIndex="2"></TextBox>
+        <TextBox Name="c6" FontSize="10" Margin="145,114,131,102" Grid.Column="4" Grid.Row="1" TabIndex="2" PreviewTextInput="NumberValidationTextBox" MaxLength="10"></TextBox>
         <Label FontSize="10" Content="Date of Birth" Margin="238,0,71,99" Height="24" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"></Label>
 
         <DatePicker Height="25" HorizontalAlignment="Left" Margin="313,116,390,100" Grid.Column="1" Grid.Row="1" TabIndex="1" Grid.ColumnSpan="4" Name="datePicker1"
