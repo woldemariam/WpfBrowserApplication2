@@ -84,6 +84,11 @@ namespace WpfBrowserApplication1
         {
         }
 
+        private void datePicker2_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
 
     }
 }
