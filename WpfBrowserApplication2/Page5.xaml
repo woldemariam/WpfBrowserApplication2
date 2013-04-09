@@ -8,6 +8,6 @@
 	Title="Page5" Background="#FF969696">
 
     <Grid Background="Silver" Height="283" Width="404">
-        <TextBlock TextWrapping="Wrap" Text=" Your order has been cancelled. Please come back soon!!" Margin="54,95,0,117"></TextBlock>
+        <TextBlock TextWrapping="Wrap" Text=" Your order has been cancelled. Please come back soon!!!!" Margin="54,95,0,117"></TextBlock>
     </Grid>
 </Page>
