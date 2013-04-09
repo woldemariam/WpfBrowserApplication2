@@ -6,7 +6,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="928"
 	Title="Page3" Background="#FF969696">
-    <Grid Height="520" Width="849" Background="Silver">
+    <Grid Height="520" Width="850" Background="Silver">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="844*" />
