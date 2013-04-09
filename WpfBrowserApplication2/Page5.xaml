@@ -4,10 +4,10 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="293" d:DesignWidth="447"
 	Title="Page5" Background="#FF969696">
 
-    <Grid Background="Silver">
-        <TextBlock TextWrapping="Wrap" Text="Your order has been cancelled. Please come back soon." Margin="0,96,46,116"></TextBlock>
+    <Grid Background="Silver" Height="283" Width="404">
+        <TextBlock TextWrapping="Wrap" Text=" Your order has been cancelled. Please come back soon!!" Margin="54,95,0,117"></TextBlock>
     </Grid>
 </Page>

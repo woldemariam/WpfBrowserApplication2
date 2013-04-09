@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="439" d:DesignWidth="929"
+      d:DesignHeight="587" d:DesignWidth="929"
 	Title="Page2" Background="#FF969696">
     
     
@@ -38,32 +38,32 @@
         <Label FontSize="10"  Content="Customer Name" Margin="1,114,231,102" Grid.ColumnSpan="2" Grid.Row="1"></Label>
         <TextBox Name="c1" FontSize="10" Margin="88,116,124,99" Grid.Column="1" Grid.Row="1" TabIndex="0"></TextBox>
         <Label FontSize="50" FontWeight="Bold" Content="Beverly Hill Online Grocery Services" Margin="10,12,9,118" Grid.Column="1" Grid.ColumnSpan="4" FontFamily="Khmer UI" Grid.RowSpan="2"></Label>
-        <TextBox Name="c2" FontSize="10" Margin="88,182,0,33" Grid.Column="1" HorizontalAlignment="Left" Width="119" Grid.Row="1" TabIndex="3"></TextBox>
+        <TextBox Background="GhostWhite" Name="c2" FontSize="10" Margin="88,182,0,33" Grid.Column="1" HorizontalAlignment="Left" Width="119" Grid.Row="1" TabIndex="3"></TextBox>
         <Label FontSize="10" Content="City" Margin="248,183,0,33" Grid.Column="1" HorizontalAlignment="Left" Width="42" Grid.Row="1"></Label>
-        <TextBox Name="c4" FontSize="10" Margin="117,182,0,33" Grid.Column="4" Grid.Row="1" TabIndex="5" HorizontalAlignment="Left" Width="59"></TextBox>
+        <TextBox Name="c4" Background="GhostWhite" FontSize="10" Margin="117,182,0,33" Grid.Column="4" Grid.Row="1" TabIndex="5" HorizontalAlignment="Left" Width="59"></TextBox>
         <Label FontSize="10"  Content="State" Margin="69,183,306,33" Grid.Column="4" Grid.Row="1"></Label>
-        <TextBox Name="c3" FontSize="10" Margin="317,182,0,33" Grid.Column="1" Grid.Row="1" TabIndex="4" HorizontalAlignment="Left" Width="137" Grid.ColumnSpan="4"></TextBox>
+        <TextBox Background="GhostWhite" Name="c3" FontSize="10" Margin="317,182,0,33" Grid.Column="1" Grid.Row="1" TabIndex="4" HorizontalAlignment="Left" Width="137" Grid.ColumnSpan="4"></TextBox>
         <Label FontSize="10"  Content="Zip Code" Margin="0,183,151,33" Grid.Column="4" HorizontalAlignment="Right" Width="63" Grid.Row="1"></Label>
-        <TextBox Name="c5" FontSize="10" Margin="0,185,78,30" Grid.Column="4" HorizontalAlignment="Right" Width="81" Grid.Row="1" TabIndex="6"></TextBox>
+        <TextBox Name="c5" Background="GhostWhite" FontSize="10" Margin="0,185,78,30" Grid.Column="4" HorizontalAlignment="Right" Width="81" Grid.Row="1" TabIndex="6"></TextBox>
         <Label FontSize="10" Content="Phone Number" Margin="60,0,261,99" Height="24" VerticalAlignment="Bottom" Grid.Column="4" Grid.Row="1"></Label>
-        <TextBox Name="c6" FontSize="10" Margin="145,114,131,102" Grid.Column="4" Grid.Row="1" TabIndex="2" PreviewTextInput="NumberValidationTextBox" MaxLength="10"></TextBox>
+        <TextBox Name="c6" FontSize="10" Margin="145,114,131,102" Grid.Column="4" Grid.Row="1" TabIndex="2" PreviewTextInput="NumberValidationTextBox" MaxLength="10" TextChanged="c6_TextChanged"></TextBox>
         <Label FontSize="10" Content="Date of Birth" Margin="238,0,71,99" Height="24" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"></Label>
 
         <DatePicker Height="25" HorizontalAlignment="Left" Margin="313,116,390,100" Grid.Column="1" Grid.Row="1" TabIndex="1" Grid.ColumnSpan="4" Name="datePicker1"
             VerticalAlignment="Top" Width="115" />
         <Label FontSize="10"  Content="Credit Card to be Placed on File" Margin="0,230,150,6" Grid.Column="1" HorizontalAlignment="Right" Width="168" Grid.Row="1" Grid.RowSpan="5"></Label>
-        <TextBox Name="zip" IsReadOnly="True" FontStyle="Italic" Text="               Beverly Hill Online Grocery Services" FontSize="10" Margin="0,197,272,3" Grid.Column="1" HorizontalAlignment="Right" Width="255" Grid.Row="7" Grid.ColumnSpan="4"></TextBox>
+        <TextBox Background="Silver" Name="zip" IsReadOnly="True" FontStyle="Italic" Text="               Beverly Hill Online Grocery Services" FontSize="10" Margin="0,197,272,3" Grid.Column="1" HorizontalAlignment="Right" Width="255" Grid.Row="7" Grid.ColumnSpan="4"></TextBox>
         <Label FontSize="10"  Content="Credit Card Number" Margin="10,0,0,214" Grid.Column="1" HorizontalAlignment="Left" Width="103" Grid.Row="6" Grid.RowSpan="2"></Label>
-        <TextBox FontSize="10" Margin="0,0,76,213" Grid.Column="1" HorizontalAlignment="Right" Width="133" Grid.Row="6" TabIndex="7" Grid.RowSpan="2"></TextBox>
+        <TextBox FontSize="10" Background="GhostWhite" Margin="0,0,76,213" Grid.Column="1" HorizontalAlignment="Right" Width="133" Grid.Row="6" TabIndex="7" Grid.RowSpan="2"></TextBox>
         <Label FontSize="10"  Content="Credit Card to be Placed on File" Margin="0,230,150,6" Grid.Column="1" HorizontalAlignment="Right" Width="168" Grid.Row="1" Grid.RowSpan="5"></Label>
         <Label FontSize="10"  Content="Credit Card Type" Margin="302,17,0,216" Grid.Column="1" HorizontalAlignment="Left" Width="103" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="3"></Label>
-        <ListBox Margin="6,10,0,183" Grid.Column="3" SelectionChanged="ListBox_SelectionChanged" Grid.Row="5" HorizontalAlignment="Left" Width="192" Grid.ColumnSpan="2" Grid.RowSpan="3">
+        <ListBox Background="silver"  Margin="6,10,0,183" Grid.Column="3" SelectionChanged="ListBox_SelectionChanged" Grid.Row="5" HorizontalAlignment="Left" Width="192" Grid.ColumnSpan="2" Grid.RowSpan="3">
             <CheckBox Name="checkbox" Content="Mastercard" Checked="checkbox_Checked" Unchecked="checkbox_Checked"></CheckBox>
             <CheckBox Name="checkbox1" Content="Visa" Checked="checkbox1_Checked" Unchecked="checkbox1_Checked"></CheckBox>
             <CheckBox Name="checkbox2" Content="American Express" Checked="checkbox2_Checked" Unchecked="checkbox2_Checked"></CheckBox>
         </ListBox>
         <Label FontSize="10"  Content="Credit Card Expiration Date" Margin="5,28,0,173" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left" Width="144"></Label>
-        <TextBox FontSize="10" Margin="0,30,55,170" Grid.Column="1" HorizontalAlignment="Right" Width="133" Grid.Row="7" TabIndex="8"></TextBox>
+        <TextBox FontSize="10" Background="GhostWhite" Margin="0,30,55,170" Grid.Column="1" HorizontalAlignment="Right" Width="133" Grid.Row="7" TabIndex="8"></TextBox>
         <Button Content="Next" Grid.Column="2" Height="20" HorizontalAlignment="Left" Margin="68,161,0,0" Name="button1" VerticalAlignment="Top" Width="74" Click="button1_Click" Grid.Row="7" Grid.ColumnSpan="3" />
         
     </Grid>

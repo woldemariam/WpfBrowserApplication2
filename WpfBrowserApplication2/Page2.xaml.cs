@@ -80,6 +80,9 @@ namespace WpfBrowserApplication1
 
         }
 
+        private void c6_TextChanged(object sender, TextChangedEventArgs e)
+        {
+        }
 
 
     }
