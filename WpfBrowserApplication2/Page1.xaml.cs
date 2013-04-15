@@ -34,7 +34,7 @@ namespace WpfBrowserApplication1
             if (result.Any(x => x.Value.ToString() == "\"" + username.Text + "\""))
             {
 
-                Uri pageURI = new Uri("page2.xaml", UriKind.Relative);
+                Uri pageURI = new Uri("page3.xaml", UriKind.Relative);
                 this.NavigationService.Navigate(pageURI);
             }
             else
@@ -46,6 +46,13 @@ namespace WpfBrowserApplication1
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+            Uri pageURI = new Uri("page2.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(pageURI);
 
         }
     }

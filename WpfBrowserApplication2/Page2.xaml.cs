@@ -12,6 +12,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
+using System.Net;
+using System.Json;
 
 namespace WpfBrowserApplication1
 {
@@ -34,7 +36,7 @@ namespace WpfBrowserApplication1
         private void button1_Click(object sender, RoutedEventArgs e)
         {
 
-            if ((c5.Text == "90210") || (c5.Text == "90211") || (c5.Text == "90212"))
+            if ( ((c5.Text == "90210") || (c5.Text == "90211") || (c5.Text == "90212")) && registeredSuccessfully() )
             {
                 Uri pageURI = new Uri("page3.xaml", UriKind.Relative);
                 this.NavigationService.Navigate(pageURI);
@@ -46,6 +48,17 @@ namespace WpfBrowserApplication1
                 zip.Text = "Sorry " + c1.Text + " we do not service your area";
             }
 
+
+        }
+
+        private bool registeredSuccessfully()
+        {
+            WebClient webClient = new WebClient();
+            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveUser&u="+username.Text)).ToString();
+
+            var item = result == "\"saved\"";
+
+            return true;
 
         }
 
@@ -89,6 +102,7 @@ namespace WpfBrowserApplication1
 
         }
 
+   
 
     }
 }

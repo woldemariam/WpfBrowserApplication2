@@ -16,12 +16,13 @@
                 <ColumnDefinition Width="11*" />
             </Grid.ColumnDefinitions>
             <TextBlock FontSize="18" TextWrapping="Wrap" Text="Welcome to Beverly Hill Online Grocery Services. We pride ourselves in providing the best service and products to you that will meet or exceed your expectation. Please note that we do not service areas outside of the 90210, 90211, 90212 zip code at this time. If you wish to proceed, please login. " HorizontalAlignment="Center" Margin="25,6,36,0" Width="336" Height="199" VerticalAlignment="Top"></TextBlock>
-            <Button Content="Enter" Height="19" HorizontalAlignment="Left" Margin="28,281,0,0" Name="button1" VerticalAlignment="Top" Width="72" Click="Button_Click" />
+            <Button Content="Login" Height="19" HorizontalAlignment="Left" Margin="28,281,0,0" Name="button1" VerticalAlignment="Top" Width="72" Click="Button_Click" />
             <Label Content="Username" Height="28" HorizontalAlignment="Left" Margin="28,206,0,0" Name="label1" VerticalAlignment="Top" />
             <Label Content="Password" Height="28" HorizontalAlignment="Left" Margin="28,240,0,0" Name="label2" VerticalAlignment="Top" />
             <TextBox Height="23" HorizontalAlignment="Left" Margin="109,211,0,0" Name="username" VerticalAlignment="Top" Width="120" />
             <Label Content="" Height="28" HorizontalAlignment="Left" Margin="280,221,0,0" Name="userNotFound" VerticalAlignment="Top" />
             <PasswordBox Height="23" HorizontalAlignment="Left" Margin="109,240,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="120" />
+            <Button Content="Click Here to Register" HorizontalAlignment="Left" Margin="28,322,0,0" VerticalAlignment="Top" Width="132" Click="Register_Click"/>
         </Grid>
     </Grid>
 </Page>
