@@ -31,7 +31,17 @@ namespace WpfBrowserApplication1
             WebClient webClient = new WebClient();
             var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=GetAllUsers")).ToList();
 
-            if (result.Any(x => x.Value.ToString() == "\"" + username.Text + "\""))
+            var db = result.Select(
+               x=> new
+                {
+                    user = x.Value.First().Value.ToString(),
+                    password = x.Value.Last().Value.ToString()
+                }
+
+            );
+
+            
+            if (db.Any(x => x.user == "\"" + username.Text + "\"") && db.First(y => y.user == "\"" + username.Text + "\"").password == "\"" + passwordBox1.Password + "\"")
             {
 
                 Uri pageURI = new Uri("page3.xaml", UriKind.Relative);

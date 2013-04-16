@@ -36,10 +36,13 @@ namespace WpfBrowserApplication1
         private void button1_Click(object sender, RoutedEventArgs e)
         {
 
-            if ( ((c5.Text == "90210") || (c5.Text == "90211") || (c5.Text == "90212")) && registeredSuccessfully() )
+            if ( ((c5.Text == "90210") || (c5.Text == "90211") || (c5.Text == "90212"))  )
             {
-                Uri pageURI = new Uri("page3.xaml", UriKind.Relative);
-                this.NavigationService.Navigate(pageURI);
+                if (registeredSuccessfully())
+                {
+                    Uri pageURI = new Uri("page3.xaml", UriKind.Relative);
+                    this.NavigationService.Navigate(pageURI);
+                }
             }
 
             else
@@ -53,8 +56,14 @@ namespace WpfBrowserApplication1
 
         private bool registeredSuccessfully()
         {
+            if (username.Text == "" || password.Password == "")
+            {
+                registerlabel.Content = "Username and Password are required";
+                return false;
+
+            }
             WebClient webClient = new WebClient();
-            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveUser&u="+username.Text)).ToString();
+            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveUser&u=" + username.Text + "&p=" + password.Password)).ToString();
 
             var item = result == "\"saved\"";
 
