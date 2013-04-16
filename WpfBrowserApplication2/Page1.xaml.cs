@@ -39,7 +39,7 @@ namespace WpfBrowserApplication1
             }
             else
             {
-                userNotFound.Content = "User Not Found";
+                userNotFound.Content = "User Not Found.";
             }
 
         }
