@@ -40,7 +40,7 @@ namespace WpfBrowserApplication1
             {
                 if (registeredSuccessfully())
                 {
-                    Uri pageURI = new Uri("page3.xaml", UriKind.Relative);
+                    Uri pageURI = new Uri("page1.xaml", UriKind.Relative);
                     this.NavigationService.Navigate(pageURI);
                 }
             }
