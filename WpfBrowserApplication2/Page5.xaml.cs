@@ -23,5 +23,12 @@ namespace WpfBrowserApplication1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            Uri pageURI = new Uri("page1.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(pageURI);
+        }
     }
 }
