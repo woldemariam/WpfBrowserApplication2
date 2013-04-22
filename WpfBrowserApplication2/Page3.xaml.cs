@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows;
+using System.Web;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -11,6 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+using System.Web.Hosting;
+using System.Diagnostics;
 
 namespace WpfBrowserApplication1
 {
@@ -83,8 +90,38 @@ namespace WpfBrowserApplication1
 
         }
 
+        private void Print_Receipt(object sender, RoutedEventArgs e)
+        {
+            var doc1 = new Document();
+
+            //use a variable to let my code fit across the page...
+            string path = System.AppDomain.CurrentDomain.BaseDirectory;
+            PdfWriter.GetInstance(doc1, new FileStream(path+"/Doc1.pdf", FileMode.Create));
+
+            doc1.Open();
+            doc1.Add(new iTextSharp.text.Paragraph("Beverly Hill Online Grocery Services"));
+            doc1.Add(new iTextSharp.text.Paragraph(" "));
+            doc1.Add(new iTextSharp.text.Paragraph(DateTime.Now.ToString()));
+            doc1.Add(new iTextSharp.text.Paragraph(" "));
+            doc1.Add(new iTextSharp.text.Paragraph(" "));
+            doc1.Add(new iTextSharp.text.Paragraph(" "));
+            doc1.Add(new iTextSharp.text.Paragraph("Subtotal: " + subtotal_1.Text));
+            doc1.Add(new iTextSharp.text.Paragraph("Tax     : " + tax_1.Text));
+            doc1.Add(new iTextSharp.text.Paragraph("Total   : " + total_1.Text));
+
+            doc1.Close();
+
+            Process wordProcess = new Process();
+            wordProcess.StartInfo.FileName = path + "/Doc1.pdf";
+            wordProcess.StartInfo.UseShellExecute = true;
+            wordProcess.Start();
+        }
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            printBtn.Visibility = Visibility.Visible;
+
             decimal taxrate;
             decimal tax;
             decimal subtotal;
@@ -1036,6 +1073,7 @@ namespace WpfBrowserApplication1
                 tax_1.Text = taxrate.ToString("00.00");
                 total_1.Text = total.ToString("00.00");
             }
+
 
         }
 

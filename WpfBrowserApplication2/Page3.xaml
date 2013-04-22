@@ -111,10 +111,11 @@ Checked="cb1_Checked" Unchecked="cb1_Checked">Whole Milk</CheckBox>
         <TextBox Name="txt32" Background="silver" IsReadOnly="True" Text="91.75" FontSize="10" Margin="774,366,28,131" Grid.Column="1"></TextBox>
 
         <Button FontSize="10" Margin="45,432,697,65" Click="Button_Click" Grid.Column="1">Confirm Order</Button>
-        <Button FontSize="10" Margin="589,461,153,36" Click="Button_Click1" Grid.Column="1">Finish</Button>
+        <Button FontSize="10" Margin="673,453,69,44" Click="Button_Click1" Grid.Column="1">Finish</Button>
         <Button FontSize="10" Margin="45,481,697,16" Click="Button_Click2" Grid.Column="1">Cancel</Button>
         <TextBox Name="subtotal_1" Background="silver"  IsReadOnly="True" FontSize="10" Text="SubTotal" Margin="317,420,0,75" Grid.Column="1" HorizontalAlignment="Left" Width="106" TextChanged="subtotal_1_TextChanged"></TextBox>
         <TextBox Name="tax_1" Background="silver" IsReadOnly="True" FontSize="10" Text="Tax" Margin="317,451,421,0" Grid.Column="1" Height="25" VerticalAlignment="Top"></TextBox>
         <TextBox Name="total_1" Background="silver" IsReadOnly="True" FontSize="10" Text="Total" Margin="317,483,421,0" Grid.Column="1" Height="25" VerticalAlignment="Top"></TextBox>
+        <Button Click="Print_Receipt" Name="printBtn" Content="Print" Grid.Column="1" HorizontalAlignment="Left" Margin="552,453,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden"/>
     </Grid>
 </Page>
