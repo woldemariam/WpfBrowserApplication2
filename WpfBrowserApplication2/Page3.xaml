@@ -6,7 +6,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="928"
 	Title="Page3" Background="#FF969696">
-    <Grid Height="520" Width="849" Background="Silver">
+    <Grid Height="520" Width="849" Background="Silver" Name="mygrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="844*" />
@@ -16,10 +16,10 @@
         <Label FontSize="10" Content="Dairy" Margin="64,80,0,415" Grid.Column="1" HorizontalAlignment="Left" Width="45"></Label>
         <ListBox Background="silver" Name="listbox1" SelectionChanged="ListBox_SelectionChanged" Margin="0,105,660,276" Grid.Column="1">
             <CheckBox FontSize="10" Margin="10, 10, 3, 3" Grid.Column="0" Grid.Row="2" Name="cb1"
-Checked="cb1_Checked" Unchecked="cb1_Checked">Whole Milk</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb2" Checked="cb2_Checked" Unchecked="cb2_Checked">Skim Milk</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb3" Checked="cb3_Checked" Unchecked="cb3_Checked">1% Milk</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb4" Checked="cb4_Checked" Unchecked="cb4_Checked">2% Milk</CheckBox>
+Checked="Checked" Unchecked="UnChecked">Whole Milk</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb2" Checked="Checked" Unchecked="UnChecked">Skim Milk</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb3" Checked="Checked" Unchecked="UnChecked">1% Milk</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb4" Checked="Checked" Unchecked="UnChecked">2% Milk</CheckBox>
         </ListBox>
         <TextBox Name="txt1" Background="silver"  IsReadOnly="True" Text="5.75" FontSize="10" TextChanged="txt_TextChanged_1" Margin="122,114,685,0" Height="22" VerticalAlignment="Top" Grid.Column="1"></TextBox>
         <TextBox Name="txt2" Background="silver" IsReadOnly="True" Text="4.49" FontSize="10" Margin="122,143,685,357" Grid.Column="1"></TextBox>
@@ -28,10 +28,10 @@ Checked="cb1_Checked" Unchecked="cb1_Checked">Whole Milk</CheckBox>
 
         <Label FontSize="10" Content="Bread" Margin="0,80,506,415" Grid.Column="1" HorizontalAlignment="Right" Width="48"></Label>
         <ListBox Background="silver" Margin="209,105,0,0" Grid.Column="1" HorizontalAlignment="Left" Width="200" Height="140" VerticalAlignment="Top">
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb5" Checked="cb5_Checked" Unchecked="cb5_Checked">White</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb6" Checked="cb6_Checked" Unchecked="cb6_Checked">Wheat</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb7" Checked="cb7_Checked" Unchecked="cb7_Checked">French</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb8" Checked="cb8_Checked" Unchecked="cb8_Checked">Oat</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb5" Checked="Checked" Unchecked="UnChecked">White</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb6" Checked="Checked" Unchecked="UnChecked">Wheat</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb7" Checked="Checked" Unchecked="UnChecked">French</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb8" Checked="Checked" Unchecked="UnChecked">Oat</CheckBox>
         </ListBox>
         <TextBox Name="txt5" Background="silver" IsReadOnly="True" Text="1.09" FontSize="10" Margin="331,114,473,0" Height="22" VerticalAlignment="Top" Grid.Column="1"></TextBox>
         <TextBox Name="txt6" Background="silver" IsReadOnly="True" Text="2.00" FontSize="10" Margin="331,143,473,0" Grid.Column="1" TextChanged="txt6_TextChanged" Height="20" VerticalAlignment="Top"></TextBox>
@@ -40,10 +40,10 @@ Checked="cb1_Checked" Unchecked="cb1_Checked">Whole Milk</CheckBox>
 
         <Label FontSize="10" Content="Fish" Margin="0,80,288,415" Grid.Column="1" HorizontalAlignment="Right" Width="48"></Label>
         <ListBox Background="silver" Margin="427,105,0,0" Grid.Column="1" HorizontalAlignment="Left" Width="200" Height="142" VerticalAlignment="Top" SelectionChanged="ListBox_SelectionChanged_1">
-            <CheckBox FontSize="10" Background="silver" Margin="10, 10, 3, 4" Name="cb9" Checked="cb9_Checked" Unchecked="cb9_Checked">Salmon</CheckBox>
-            <CheckBox FontSize="10" Background="silver" Margin="10, 10, 3, 4" Name="cb10" Checked="cb10_Checked" Unchecked="cb10_Checked">Tilapia</CheckBox>
-            <CheckBox FontSize="10" Background="silver" Margin="10, 10, 3, 4" Name="cb11" Checked="cb11_Checked" Unchecked="cb11_Checked">Halibut</CheckBox>
-            <CheckBox FontSize="10" Background="silver" Margin="10, 10, 3, 4" Name="cb12" Checked="cb12_Checked" Unchecked="cb12_Checked">Tuna</CheckBox>
+            <CheckBox FontSize="10" Background="silver" Margin="10, 10, 3, 4" Name="cb9"  Checked="Checked" Unchecked="UnChecked">Salmon</CheckBox>
+            <CheckBox FontSize="10" Background="silver" Margin="10, 10, 3, 4" Name="cb10" Checked="Checked" Unchecked="UnChecked">Tilapia</CheckBox>
+            <CheckBox FontSize="10" Background="silver" Margin="10, 10, 3, 4" Name="cb11" Checked="Checked" Unchecked="UnChecked">Halibut</CheckBox>
+            <CheckBox FontSize="10" Background="silver" Margin="10, 10, 3, 4" Name="cb12" Checked="Checked" Unchecked="UnChecked">Tuna</CheckBox>
         </ListBox>
         <TextBox Name="txt9" Background="silver"  IsReadOnly="True" Text="6.25" FontSize="10" Margin="560,114,245,0" Height="22" VerticalAlignment="Top" Grid.Column="1"></TextBox>
         <TextBox Name="txt10" Background="silver" IsReadOnly="True" Text="3.25" FontSize="10" Margin="0,0,245,357" Grid.Column="1" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="39"></TextBox>
@@ -52,10 +52,10 @@ Checked="cb1_Checked" Unchecked="cb1_Checked">Whole Milk</CheckBox>
 
         <Label FontSize="10" Content="Poultry" Margin="0,80,69,415" Grid.Column="1" HorizontalAlignment="Right" Width="48"></Label>
         <ListBox Background="silver"  Margin="646,107,0,0" Grid.Column="1" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="188">
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb13" Checked="cb13_Checked" Unchecked="cb13_Checked">Breast</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb14" Checked="cb14_Checked" Unchecked="cb14_Checked">Drumsticks</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb15" Checked="cb15_Checked" Unchecked="cb15_Checked">Thighs</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb16" Checked="cb16_Checked" Unchecked="cb16_Checked">Wings</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb13" Checked="Checked" Unchecked="UnChecked">Breast</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb14" Checked="Checked" Unchecked="UnChecked">Drumsticks</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb15" Checked="Checked" Unchecked="UnChecked">Thighs</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb16" Checked="Checked" Unchecked="UnChecked">Wings</CheckBox>
         </ListBox>
         <TextBox Name="txt13" Background="silver" IsReadOnly="True" Text="8.00" FontSize="10" Margin="785,116,29,0" Height="22" VerticalAlignment="Top" Grid.Column="1"></TextBox>
         <TextBox Name="txt14" Background="silver" IsReadOnly="True" Text="5.79" FontSize="10" Margin="785,143,29,357" Grid.Column="1" TextChanged="txt6_TextChanged"></TextBox>
@@ -64,10 +64,10 @@ Checked="cb1_Checked" Unchecked="cb1_Checked">Whole Milk</CheckBox>
 
         <Label FontSize="10" Content="Beef" Margin="0,250,735,245" Grid.Column="1" HorizontalAlignment="Right" Width="48"></Label>
         <ListBox Background="silver" Margin="0,275,0,0" HorizontalAlignment="Left" Width="187" Height="139" VerticalAlignment="Top" SelectionChanged="ListBox_SelectionChanged_2" Grid.Column="1">
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb17" Checked="cb17_Checked" Unchecked="cb17_Checked">Sirloin</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb18" Checked="cb18_Checked" Unchecked="cb18_Checked">Ribeye</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb19" Checked="cb19_Checked" Unchecked="cb19_Checked">T Bone</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb20" Checked="cb20_Checked" Unchecked="cb20_Checked">Short Ribs</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb17" Checked="Checked" Unchecked="UnChecked">Sirloin</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb18" Checked="Checked" Unchecked="UnChecked">Ribeye</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb19" Checked="Checked" Unchecked="UnChecked">T Bone</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb20" Checked="Checked" Unchecked="UnChecked">Short Ribs</CheckBox>
         </ListBox>
         <TextBox Name="txt17" Background="silver" IsReadOnly="True" Text="17.50" FontSize="10" Margin="129,284,676,0" Height="22" VerticalAlignment="Top" Grid.Column="1"></TextBox>
         <TextBox Name="txt18" Background="silver" IsReadOnly="True" Text="20.29" FontSize="10" Margin="128,312,676,188" Grid.Column="1" TextChanged="txt6_TextChanged"></TextBox>
@@ -76,10 +76,10 @@ Checked="cb1_Checked" Unchecked="cb1_Checked">Whole Milk</CheckBox>
 
         <Label FontSize="10" Content="Pork" Margin="0,250,506,245" Grid.Column="1" HorizontalAlignment="Right" Width="48"></Label>
         <ListBox Background="silver" Margin="209,275,0,0" Grid.Column="1" HorizontalAlignment="Left" Width="200" Height="139" VerticalAlignment="Top">
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb21" Checked="cb21_Checked" Unchecked="cb21_Checked">Roast</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb22" Checked="cb22_Checked" Unchecked="cb22_Checked">Spare Ribs</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb23" Checked="cb23_Checked" Unchecked="cb23_Checked">Tenderloin</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb24" Checked="cb24_Checked" Unchecked="cb24_Checked">Whole Ham</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb21" Checked="Checked" Unchecked="UnChecked">Roast</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb22" Checked="Checked" Unchecked="UnChecked">Spare Ribs</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb23" Checked="Checked" Unchecked="UnChecked">Tenderloin</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb24" Checked="Checked" Unchecked="UnChecked">Whole Ham</CheckBox>
         </ListBox>
         <TextBox Name="txt21" Background="silver"  IsReadOnly="True" Text="21.29" FontSize="10" Margin="362,284,444,0" Height="22" VerticalAlignment="Top" Grid.Column="1"></TextBox>
         <TextBox Name="txt22" Background="silver" IsReadOnly="True" Text="18.85" FontSize="10" Margin="362,312,444,188" Grid.Column="1" TextChanged="txt6_TextChanged"></TextBox>
@@ -88,10 +88,10 @@ Checked="cb1_Checked" Unchecked="cb1_Checked">Whole Milk</CheckBox>
 
         <Label FontSize="10" Content="Fruits" Margin="0,250,288,245" Grid.Column="1" HorizontalAlignment="Right" Width="48"></Label>
         <ListBox Background="silver" Margin="427,275,0,0" Grid.Column="1" HorizontalAlignment="Left" Width="200" Height="139" VerticalAlignment="Top">
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb25" Checked="cb25_Checked" Unchecked="cb25_Checked">Strawberries</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb26" Checked="cb26_Checked" Unchecked="cb26_Checked">Watermelon</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb27" Checked="cb27_Checked" Unchecked="cb27_Checked">Apple</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb28" Checked="cb28_Checked" Unchecked="cb28_Checked">Oranges</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb25" Checked="Checked" Unchecked="UnChecked">Strawberries</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb26" Checked="Checked" Unchecked="UnChecked">Watermelon</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb27" Checked="Checked" Unchecked="UnChecked">Apple</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb28" Checked="Checked" Unchecked="UnChecked">Oranges</CheckBox>
         </ListBox>
         <TextBox Name="txt25" Background="silver" IsReadOnly="True" Text="5.65" FontSize="10" Margin="569,284,235,0" Height="22" VerticalAlignment="Top" Grid.Column="1"></TextBox>
         <TextBox Name="txt26" Background="silver" IsReadOnly="True" Text="4.50" FontSize="10" Margin="569,312,235,188" Grid.Column="1" TextChanged="txt6_TextChanged"></TextBox>
@@ -100,10 +100,10 @@ Checked="cb1_Checked" Unchecked="cb1_Checked">Whole Milk</CheckBox>
 
         <Label FontSize="10" Content="Wine" Margin="0,250,78,245" Grid.Column="1" HorizontalAlignment="Right" Width="48"></Label>
         <ListBox Background="silver"  Margin="646,274,0,0" Grid.Column="1" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="188">
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb29" Checked="cb29_Checked" Unchecked="cb29_Checked">Italian Merlot</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb30" Checked="cb30_Checked" Unchecked="cb30_Checked">Ontario Carbernet</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb31" Checked="cb31_Checked" Unchecked="cb31_Checked">Monferrato Dolcetto</CheckBox>
-            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb32" Checked="cb32_Checked" Unchecked="cb32_Checked">Baron De Solano</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb29" Checked="Checked" Unchecked="UnChecked">Italian Merlot</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb30" Checked="Checked" Unchecked="UnChecked">Ontario Carbernet</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb31" Checked="Checked" Unchecked="UnChecked">Monferrato Dolcetto</CheckBox>
+            <CheckBox FontSize="10" Margin="10, 10, 3, 4" Name="cb32" Checked="Checked" Unchecked="UnChecked">Baron De Solano</CheckBox>
         </ListBox>
         <TextBox Name="txt29" Background="silver" IsReadOnly="True" Text="100.00" FontSize="10" Margin="773,283,29,0" Height="22" VerticalAlignment="Top" Grid.Column="1"></TextBox>
         <TextBox Name="txt30" Background="silver" IsReadOnly="True" Text="153.20" FontSize="10" Margin="773,310,29,190" Grid.Column="1" TextChanged="txt6_TextChanged"></TextBox>

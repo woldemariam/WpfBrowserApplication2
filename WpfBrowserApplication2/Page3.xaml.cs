@@ -26,55 +26,23 @@ namespace WpfBrowserApplication1
     /// </summary>
     public partial class Page3 : Page
     {
+        string selected = "";
         public Page3()
         {
             InitializeComponent();
         }
 
-        private void cb1_Checked(object sender, RoutedEventArgs e)
+        private void Checked(object sender, RoutedEventArgs e)
         {
-
+            selected += ((CheckBox)sender).Content+"\n";
         }
 
-        private void cb2_Checked(object sender, RoutedEventArgs e)
+        private void UnChecked(object sender, RoutedEventArgs e)
         {
-
+            CheckBox myWpfButton = (CheckBox)sender;
         }
 
-        private void cb3_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb4_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void c4_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void cb5_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb6_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb7_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb8_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
+   
         private void txt_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -94,20 +62,45 @@ namespace WpfBrowserApplication1
         {
             var doc1 = new Document();
 
-            //use a variable to let my code fit across the page...
             string path = System.AppDomain.CurrentDomain.BaseDirectory;
             PdfWriter.GetInstance(doc1, new FileStream(path+"/Doc1.pdf", FileMode.Create));
 
+          
+
             doc1.Open();
-            doc1.Add(new iTextSharp.text.Paragraph("Beverly Hill Online Grocery Services"));
-            doc1.Add(new iTextSharp.text.Paragraph(" "));
+
             doc1.Add(new iTextSharp.text.Paragraph(DateTime.Now.ToString()));
             doc1.Add(new iTextSharp.text.Paragraph(" "));
-            doc1.Add(new iTextSharp.text.Paragraph(" "));
-            doc1.Add(new iTextSharp.text.Paragraph(" "));
-            doc1.Add(new iTextSharp.text.Paragraph("Subtotal: " + subtotal_1.Text));
-            doc1.Add(new iTextSharp.text.Paragraph("Tax     : " + tax_1.Text));
-            doc1.Add(new iTextSharp.text.Paragraph("Total   : " + total_1.Text));
+
+            PdfPTable table = new PdfPTable(2);
+            PdfPCell cell = new PdfPCell(new Phrase("Beverly Hill Online Grocery Services"));
+            table.DefaultCell.Border = 0;
+            table.TotalWidth = 170;
+            table.HorizontalAlignment = 0;
+
+            cell.Colspan = 2;
+            cell.PaddingBottom = 10;
+            cell.Border = 0;
+            cell.HorizontalAlignment = 0; //0=Left, 1=Centre, 2=Right
+            table.AddCell(cell);
+
+            cell = new PdfPCell(new Phrase(selected));
+            cell.PaddingBottom = 10;
+            cell.Border = 0;
+            cell.Colspan = 2;
+            cell.HorizontalAlignment = 0; 
+            table.AddCell(cell);
+            table.AddCell("Subtotal");
+            table.AddCell(subtotal_1.Text);
+
+            table.AddCell("Tax");
+            table.AddCell(tax_1.Text);
+
+            table.AddCell("Total");
+            table.AddCell(total_1.Text);
+
+            doc1.Add(table);
+ 
 
             doc1.Close();
 
@@ -1143,124 +1136,6 @@ namespace WpfBrowserApplication1
 
         }
 
-        private void cb9_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb10_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb11_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb12_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb13_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb14_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb15_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb16_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb17_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb18_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb19_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb20_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb21_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb22_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb23_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb24_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb25_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb26_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb27_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb28_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb29_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb30_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb31_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb32_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
+      
     }
 }
