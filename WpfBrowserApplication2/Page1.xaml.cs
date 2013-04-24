@@ -46,6 +46,9 @@ namespace WpfBrowserApplication1
 
                 Uri pageURI = new Uri("page3.xaml", UriKind.Relative);
                 this.NavigationService.Navigate(pageURI);
+
+
+                Application.Current.Properties["user"] = username.Text;
             }
             else
             {

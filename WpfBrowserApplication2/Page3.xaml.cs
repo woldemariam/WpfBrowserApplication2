@@ -30,6 +30,7 @@ namespace WpfBrowserApplication1
         public Page3()
         {
             InitializeComponent();
+            user.Content = "LOGGED IN AS: "+App.Current.Properties["user"];
         }
 
         private void Checked(object sender, RoutedEventArgs e)
