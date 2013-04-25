@@ -18,6 +18,8 @@ using iTextSharp.text.pdf;
 using System.IO;
 using System.Web.Hosting;
 using System.Diagnostics;
+using System.Net;
+using System.Json;
 
 namespace WpfBrowserApplication1
 {
@@ -27,6 +29,7 @@ namespace WpfBrowserApplication1
     public partial class Page3 : Page
     {
         string selected = "";
+        string selected2 = "";
         public Page3()
         {
             InitializeComponent();
@@ -36,6 +39,7 @@ namespace WpfBrowserApplication1
         private void Checked(object sender, RoutedEventArgs e)
         {
             selected += ((CheckBox)sender).Content+"\n";
+            selected2 += ((CheckBox)sender).Content + ", ";
         }
 
         private void UnChecked(object sender, RoutedEventArgs e)
@@ -1124,9 +1128,18 @@ namespace WpfBrowserApplication1
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
+            saveHistory();
+
 
             Uri pageURI = new Uri("page4.xaml", UriKind.Relative);
             this.NavigationService.Navigate(pageURI);
+
+        }
+
+        private void saveHistory()
+        {
+            WebClient webClient = new WebClient();
+            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveHistory&u=" + App.Current.Properties["user"] + "&d=" + DateTime.Now.ToLongDateString() + "&i=" + selected2)).ToString();
 
         }
 
@@ -1135,6 +1148,12 @@ namespace WpfBrowserApplication1
             Uri pageURI = new Uri("page5.xaml", UriKind.Relative);
             this.NavigationService.Navigate(pageURI);
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Uri pageURI = new Uri("History.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(pageURI);
         }
 
       

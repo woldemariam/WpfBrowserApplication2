@@ -117,6 +117,7 @@ Checked="Checked" Unchecked="UnChecked">Whole Milk</CheckBox>
         <TextBox Name="tax_1" Background="silver" IsReadOnly="True" FontSize="10" Text="Tax" Margin="317,451,421,0" Grid.Column="1" Height="25" VerticalAlignment="Top"></TextBox>
         <TextBox Name="total_1" Background="silver" IsReadOnly="True" FontSize="10" Text="Total" Margin="317,483,421,0" Grid.Column="1" Height="25" VerticalAlignment="Top"></TextBox>
         <Button Click="Print_Receipt" Name="printBtn" Content="Print" Grid.Column="1" HorizontalAlignment="Left" Margin="552,453,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden"/>
-        <Label FontSize="15" FontWeight="Bold" Name="user" Content="" HorizontalAlignment="Left" Margin="475,490,0,0" VerticalAlignment="Top" Grid.Column="1" />
+        <Label FontSize="15" FontWeight="Bold" Name="user" Content="" HorizontalAlignment="Left" Margin="177,538,0,-48" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="8.1,0.8" />
+        <Button Content="View Your Purchase History" HorizontalAlignment="Left" Height="30" Margin="0,538,0,-48" VerticalAlignment="Top" Width="161" Click="Button_Click_1" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>
