@@ -15,6 +15,7 @@
                 <ColumnDefinition Width="0*" />
                 <ColumnDefinition Width="11*" />
             </Grid.ColumnDefinitions>
+
             <TextBlock FontSize="18" TextWrapping="Wrap" Text="Welcome to Beverly Hill Online Grocery Services. We pride ourselves in providing the best service and products to you that will meet or exceed your expectation. Please note that we do not service areas outside of the 90210, 90211, 90212 zip code at this time. If you wish to proceed, please login. " HorizontalAlignment="Center" Margin="25,6,36,0" Width="336" Height="199" VerticalAlignment="Top"></TextBlock>
             <Button Content="Login" Height="19" HorizontalAlignment="Left" Margin="28,281,0,0" Name="button1" VerticalAlignment="Top" Width="72" Click="Button_Click" />
             <Label Content="Username" Height="28" HorizontalAlignment="Left" Margin="28,206,0,0" Name="label1" VerticalAlignment="Top" />

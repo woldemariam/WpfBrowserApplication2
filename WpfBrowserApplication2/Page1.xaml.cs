@@ -68,6 +68,8 @@ namespace WpfBrowserApplication1
             this.NavigationService.Navigate(pageURI);
 
         }
+
+     
     }
 }
 
