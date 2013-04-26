@@ -8,7 +8,13 @@
 	Title="Page5" Background="#FF969696">
 
     <Grid Background="Silver" Height="283" Width="404">
-        <TextBlock TextWrapping="Wrap" Text=" Your order has been cancelled. Please come back soon!" Margin="54,95,0,117"></TextBlock>
+
+        <TextBox Margin="129,114,134,0" VerticalAlignment="Top" HorizontalAlignment=" Center" Height="90" Width="141">
+            <TextBox.Background>
+                <ImageBrush ImageSource="http://newmediaandmarketing.com/wp-content/uploads/2012/08/come-back-again-sign-11100602.jpeg"></ImageBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBlock FontStyle="Italic" FontFamily="Script MT" FontSize="16" TextWrapping="Wrap" Text=" Your order has been cancelled." Margin="106,86,-52,126"></TextBlock>
         <Button Margin="164,218,161,39" Click="Button_Click">Log-In Again</Button>
     </Grid>
 </Page>

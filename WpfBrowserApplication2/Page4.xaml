@@ -8,6 +8,12 @@
 	Title="Page4" Background="#FF969696">
 
     <Grid Background="Silver">
-        <TextBlock TextWrapping="Wrap" Height="35" VerticalAlignment="Center" Margin="0,12,0,0" Name="textBlock1" Text="Thank you for using Beverly Hill Online Grocery Services. We certainly appreciate your business!" Width="263" />
+
+        <TextBox Margin="47,213,62,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="109" Width="191">
+            <TextBox.Background>
+                <ImageBrush ImageSource="http://brandeducationservices.com/wp/wp-content/uploads/2012/01/fresh-fruits-vegetables-2419.jpg"></ImageBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Script MT" FontSize="14" TextWrapping="Wrap" Height="63" VerticalAlignment="Center" Margin="27,12,45,225" Name="textBlock1" Text="Thank you for using Beverly Hill Online Grocery Services. We certainly appreciate your business!" />
     </Grid>
 </Page>

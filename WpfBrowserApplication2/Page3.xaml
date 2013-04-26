@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="660" d:DesignWidth="928"
+      d:DesignHeight="825" d:DesignWidth="961"
 	Title="Page3" Background="#FF969696">
     <Grid Height="520" Width="849" Background="Silver" Name="mygrid">
         <Grid.ColumnDefinitions>
@@ -12,7 +12,7 @@
             <ColumnDefinition Width="844*" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
-        <Label FontSize="50" FontWeight="Bold" Content="Beverly Hill Online Grocery Services" FontFamily="Khmer UI" Margin="0,0,0,446" Grid.ColumnSpan="2"></Label>
+        <Label FontSize="50" Content="Beverly Hill Online Grocery Services" FontFamily="Script MT" HorizontalAlignment="Center" Margin="0,0,0,446" Grid.ColumnSpan="2"></Label>
         <Label FontSize="10" Content="Dairy" Margin="64,80,0,415" Grid.Column="1" HorizontalAlignment="Left" Width="45"></Label>
         <ListBox Background="silver" Name="listbox1" SelectionChanged="ListBox_SelectionChanged" Margin="0,105,660,276" Grid.Column="1">
             <CheckBox FontSize="10" Margin="10, 10, 3, 3" Grid.Column="0" Grid.Row="2" Name="cb1"
@@ -110,14 +110,14 @@ Checked="Checked" Unchecked="UnChecked">Whole Milk</CheckBox>
         <TextBox Name="txt31" Background="silver" IsReadOnly="True" Text="122.50" FontSize="10" Margin="773,339,28,0" Grid.Column="1" Height="23" VerticalAlignment="Top"></TextBox>
         <TextBox Name="txt32" Background="silver" IsReadOnly="True" Text="91.75" FontSize="10" Margin="774,366,28,131" Grid.Column="1"></TextBox>
 
-        <Button FontSize="10" Margin="45,432,697,65" Click="Button_Click" Grid.Column="1">Confirm Order</Button>
-        <Button FontSize="10" Margin="673,453,69,44" Click="Button_Click1" Grid.Column="1">Finish</Button>
-        <Button FontSize="10" Margin="45,481,697,16" Click="Button_Click2" Grid.Column="1">Cancel</Button>
+        <Button FontSize="10" Margin="56,422,686,75" Click="Button_Click" Grid.Column="1">Confirm Order</Button>
+        <Button FontSize="10" Margin="454,485,288,12" Click="Button_Click1" Grid.Column="1">Finish</Button>
+        <Button FontSize="10" Margin="454,432,288,65" Click="Button_Click2" Grid.Column="1">Cancel</Button>
         <TextBox Name="subtotal_1" Background="silver"  IsReadOnly="True" FontSize="10" Text="SubTotal" Margin="317,420,0,75" Grid.Column="1" HorizontalAlignment="Left" Width="106" TextChanged="subtotal_1_TextChanged"></TextBox>
         <TextBox Name="tax_1" Background="silver" IsReadOnly="True" FontSize="10" Text="Tax" Margin="317,451,421,0" Grid.Column="1" Height="25" VerticalAlignment="Top"></TextBox>
         <TextBox Name="total_1" Background="silver" IsReadOnly="True" FontSize="10" Text="Total" Margin="317,483,421,0" Grid.Column="1" Height="25" VerticalAlignment="Top"></TextBox>
-        <Button Click="Print_Receipt" Name="printBtn" Content="Print" Grid.Column="1" HorizontalAlignment="Left" Margin="552,453,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden"/>
-        <Label FontSize="15" FontWeight="Bold" Name="user" Content="" HorizontalAlignment="Left" Margin="177,538,0,-48" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="8.1,0.8" />
-        <Button Content="View Your Purchase History" HorizontalAlignment="Left" Height="30" Margin="0,538,0,-48" VerticalAlignment="Top" Width="161" Click="Button_Click_1" Grid.ColumnSpan="2"/>
+        <Button Click="Print_Receipt" Name="printBtn" Content="Print" Grid.Column="1" HorizontalAlignment="Left" Margin="73,454,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden"/>
+        <Label FontSize="15" FontWeight="Bold" Name="user" Content="" HorizontalAlignment="Left" Margin="599,446,0,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="8.1,0.8" />
+        <Button FontSize="10" Content="View Your Purchase History" HorizontalAlignment="Left" Height="26" Margin="37,480,0,0" VerticalAlignment="Top" Width="139" Click="Button_Click_1" Grid.Column="1" />
     </Grid>
 </Page>
