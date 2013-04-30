@@ -4,17 +4,21 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="293" d:DesignWidth="447"
-	Title="Page5" Background="#FF969696">
+      d:DesignHeight="298" d:DesignWidth="576"
+	Title="Page5" Background="AntiqueWhite">
 
-    <Grid Background="Silver" Height="283" Width="404">
-
-        <TextBox Margin="129,114,134,0" VerticalAlignment="Top" HorizontalAlignment=" Center" Height="90" Width="141">
+    <Grid Background="AntiqueWhite" Height="299" Width="805">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="444*" />
+            <ColumnDefinition Width="130*" />
+        </Grid.ColumnDefinitions>
+        <TextBox Margin="243,92,243,0" VerticalAlignment="Top" HorizontalAlignment=" Center" Height="90" Width="141">
             <TextBox.Background>
-                <ImageBrush ImageSource="http://newmediaandmarketing.com/wp-content/uploads/2012/08/come-back-again-sign-11100602.jpeg"></ImageBrush>
+                <ImageBrush ImageSource="http://img.wikinut.com/img/y9j7njpz-3b.6gab/jpeg/0/Iron-rich-foods.jpeg"></ImageBrush>
             </TextBox.Background>
         </TextBox>
-        <TextBlock FontStyle="Italic" FontFamily="Script MT" FontSize="16" TextWrapping="Wrap" Text=" Your order has been cancelled." Margin="106,86,-52,126"></TextBlock>
-        <Button Margin="164,218,161,39" Click="Button_Click">Log-In Again</Button>
+
+        <TextBlock FontStyle="Italic" FontFamily="Script MT" FontSize="20" TextWrapping="Wrap" Text=" Your order has been cancelled. Please come back soon!" Margin="85,36,-31,176" Grid.ColumnSpan="2"></TextBlock>
+        <Button Margin="273,219,275,56" Click="Button_Click">Log-In Again</Button>
     </Grid>
 </Page>

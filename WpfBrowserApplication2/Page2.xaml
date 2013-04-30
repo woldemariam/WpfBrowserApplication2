@@ -5,17 +5,9 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="587" d:DesignWidth="929"
-	Title="Page2" Background="#FF969696">
+	Title="Page2" Background="WhiteSmoke">
     
-    
-    
-    
-    
-    
-    
-    
-    
-    <Grid Height="520" Width="849" Background="Silver">
+    <Grid Height="520" Width="849" Background="AntiqueWhite">
         <Grid.RowDefinitions>
             <RowDefinition Height="23*" />
             <RowDefinition Height="240*" />
@@ -52,12 +44,12 @@
         <DatePicker Height="26" HorizontalAlignment="Left" Margin="39,141,0,0" Grid.Column="2" Grid.Row="1" TabIndex="1" Grid.ColumnSpan="3" Name="datePicker1"
             VerticalAlignment="Top" Width="136" />
         <Label FontSize="10"  Content="Credit Card to be Placed on File" Margin="0,230,150,6" Grid.Column="1" HorizontalAlignment="Right" Width="168" Grid.Row="1" Grid.RowSpan="5"></Label>
-        <TextBox Background="Silver" Name="zip" IsReadOnly="True" FontStyle="Italic" Text="               Beverly Hill Online Grocery Services" FontSize="10" Margin="0,148,275,52" Grid.Column="1" HorizontalAlignment="Right" Width="255" Grid.Row="7" Grid.ColumnSpan="4"></TextBox>
+        <TextBox Background="AntiqueWhite" Name="zip" IsReadOnly="True" FontStyle="Italic" Text="               Beverly Hill Online Grocery Services" FontSize="10" Margin="0,148,275,52" Grid.Column="1" HorizontalAlignment="Right" Width="255" Grid.Row="7" Grid.ColumnSpan="4"></TextBox>
         <Label FontSize="10"  Content="Credit Card Number" Margin="10,0,0,214" Grid.Column="1" HorizontalAlignment="Left" Width="103" Grid.Row="6" Grid.RowSpan="2"></Label>
         <TextBox FontSize="10" Background="GhostWhite" Margin="0,0,76,213" Grid.Column="1" HorizontalAlignment="Right" Width="133" Grid.Row="6" TabIndex="7" Grid.RowSpan="2"></TextBox>
         <Label FontSize="10"  Content="Credit Card to be Placed on File" Margin="0,230,150,6" Grid.Column="1" HorizontalAlignment="Right" Width="168" Grid.Row="1" Grid.RowSpan="5"></Label>
         <Label FontSize="10"  Content="Credit Card Type" Margin="302,17,0,216" Grid.Column="1" HorizontalAlignment="Left" Width="103" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="3"></Label>
-        <ListBox Background="silver"  Margin="6,10,0,183" Grid.Column="3" SelectionChanged="ListBox_SelectionChanged" Grid.Row="5" HorizontalAlignment="Left" Width="192" Grid.ColumnSpan="2" Grid.RowSpan="3">
+        <ListBox Background="AntiqueWhite"  Margin="6,10,0,183" Grid.Column="3" SelectionChanged="ListBox_SelectionChanged" Grid.Row="5" HorizontalAlignment="Left" Width="192" Grid.ColumnSpan="2" Grid.RowSpan="3">
             <CheckBox Name="checkbox" Content="Mastercard" Checked="checkbox_Checked" Unchecked="checkbox_Checked"></CheckBox>
             <CheckBox Name="checkbox1" Content="Visa" Checked="checkbox1_Checked" Unchecked="checkbox1_Checked"></CheckBox>
             <CheckBox Name="checkbox2" Content="American Express" Checked="checkbox2_Checked" Unchecked="checkbox2_Checked"></CheckBox>
@@ -69,7 +61,7 @@
         <Button Content="Next" Grid.Column="2" Height="20" HorizontalAlignment="Left" Margin="68,104,0,0" Name="button1" VerticalAlignment="Top" Width="74" Click="button1_Click" Grid.Row="7" Grid.ColumnSpan="3" />
         <Label Content="Password" Grid.Column="1" Margin="214,68,55,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="UserName" Grid.Column="1" HorizontalAlignment="Left" Margin="10,68,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="89,68,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="username"/>
+        <TextBox  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="89,68,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="username"/>
         <PasswordBox Grid.Column="1" HorizontalAlignment="Left" Margin="287,71,0,0" Grid.Row="1" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.062,-0.7" Grid.ColumnSpan="4"  Name="password"/>
         <Label Name="registerlabel" Content="" Grid.Column="4" HorizontalAlignment="Left" Margin="81,65,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#FFEA0707"/>
     </Grid>
