@@ -25,6 +25,36 @@ namespace WpfBrowserApplication1
         public Page2()
         {
             InitializeComponent();
+
+            if (App.Current.Properties["user"] != null)
+            {
+                fillData();
+            }
+        }
+
+        private void fillData()
+        {
+            WebClient webClient = new WebClient();
+            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=GetAllUsers")).ToList();
+
+            var db = result.Select(
+               x => new
+               {
+                   user = x.Value[0].ToString(),
+                   password = x.Value[1].ToString(),
+                   name = x.Value[2].ToString()
+               }
+
+            );
+
+
+            var user = db.First(x => x.user == "\"" + App.Current.Properties["user"] + "\"");
+
+            c1.Text = user.name.Replace("\"", "");
+
+            button1.Content = "Save";
+           
+
         }
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
@@ -35,9 +65,8 @@ namespace WpfBrowserApplication1
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            
 
-            if ( ((c5.Text == "90210") || (c5.Text == "90211") || (c5.Text == "90212"))  )
+            if (((c5.Text == "90210") || (c5.Text == "90211") || (c5.Text == "90212")))
             {
                 if (registeredSuccessfully())
                 {
@@ -51,20 +80,26 @@ namespace WpfBrowserApplication1
 
                 zip.Text = "Sorry " + c1.Text + " we do not service your area";
             }
-
-
         }
 
         private bool registeredSuccessfully()
         {
-            if (username.Text == "" || password.Password == "")
+            if (App.Current.Properties["user"] == null)
             {
-                registerlabel.Content = "Username and Password are required";
-                return false;
+                if (username.Text == "" || password.Password == "")
+                {
+                    registerlabel.Content = "Username and Password are required";
+                    return false;
 
+                }
             }
+
+            var usernam =  App.Current.Properties["user"]?? username.Text;
+            var pass = String.IsNullOrEmpty(password.Password) ? "n" : password.Password;
+            var name = c1.Text;
+
             WebClient webClient = new WebClient();
-            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveUser&u=" + username.Text + "&p=" + password.Password)).ToString();
+            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveUser&u=" + usernam + "&p=" + pass + "&n=" + name)).ToString();
 
             var item = result == "\"saved\"";
 

@@ -34,8 +34,8 @@ namespace WpfBrowserApplication1
             var db = result.Select(
                x=> new
                 {
-                    user = x.Value.First().Value.ToString(),
-                    password = x.Value.Last().Value.ToString()
+                    user = x.Value[0].ToString(),
+                    password = x.Value[1].ToString()
                 }
 
             );

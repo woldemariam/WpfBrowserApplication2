@@ -116,8 +116,9 @@ Checked="Checked" Unchecked="UnChecked">Whole Milk</CheckBox>
         <TextBox Name="subtotal_1" Background="AntiqueWhite"  IsReadOnly="True" FontSize="10" Text="SubTotal" Margin="317,420,0,75" Grid.Column="1" HorizontalAlignment="Left" Width="106" TextChanged="subtotal_1_TextChanged"></TextBox>
         <TextBox Name="tax_1" Background="AntiqueWhite" IsReadOnly="True" FontSize="10" Text="Tax" Margin="317,451,421,0" Grid.Column="1" Height="25" VerticalAlignment="Top"></TextBox>
         <TextBox Name="total_1" Background="AntiqueWhite" IsReadOnly="True" FontSize="10" Text="Total" Margin="317,483,421,0" Grid.Column="1" Height="25" VerticalAlignment="Top"></TextBox>
-        <Button Click="Print_Receipt" Name="printBtn" Content="Print" Grid.Column="1" HorizontalAlignment="Left" Margin="83,473,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden" Height="30" />
+        <Button Click="Print_Receipt" Name="printBtn" Content="Print" Visibility="Hidden" Grid.Column="1" HorizontalAlignment="Left" Margin="10,477,0,0" VerticalAlignment="Top" Width="75" Height="30" />
         <Label FontSize="15" FontWeight="Bold" Name="user" Content="" HorizontalAlignment="Left" Margin="454,473,0,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="8.1,0.8" />
         <Button FontSize="10" Content="View Your Purchase History" HorizontalAlignment="Left" Height="26" Margin="142,432,0,0" VerticalAlignment="Top" Width="139" Click="Button_Click_1" Grid.Column="1" />
+        <Button Name="Edit_Profile" Content="Edit_Profile" Grid.Column="1" HorizontalAlignment="Left" Margin="142,483,0,0" VerticalAlignment="Top" Width="139" Click="Edit_Profile_Click"/>
     </Grid>
 </Page>

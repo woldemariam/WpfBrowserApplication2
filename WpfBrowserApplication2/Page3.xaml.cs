@@ -1156,6 +1156,12 @@ namespace WpfBrowserApplication1
             this.NavigationService.Navigate(pageURI);
         }
 
+        private void Edit_Profile_Click(object sender, RoutedEventArgs e)
+        {
+            Uri pageURI = new Uri("page2.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(pageURI);
+        }
+
       
     }
 }
