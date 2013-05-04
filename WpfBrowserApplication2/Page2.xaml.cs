@@ -42,7 +42,13 @@ namespace WpfBrowserApplication1
                {
                    user = x.Value[0].ToString(),
                    password = x.Value[1].ToString(),
-                   name = x.Value[2].ToString()
+                   name = x.Value[2].ToString(),
+                   zip = x.Value[3].ToString(),
+                   dob = x.Value[4].ToString(),
+                   phone = x.Value[5].ToString(),
+                   street = x.Value[6].ToString(),
+                   city = x.Value[7].ToString(),
+                   state = x.Value[8].ToString()
                }
 
             );
@@ -51,8 +57,18 @@ namespace WpfBrowserApplication1
             var user = db.First(x => x.user == "\"" + App.Current.Properties["user"] + "\"");
 
             c1.Text = user.name.Replace("\"", "");
+            c5.Text = user.zip.Replace("\"", "");
+            datePicker1.Text  = user.dob.Replace("\"", "").Replace("-","/");
+            c6.Text = user.phone.Replace("\"", "");
+            c2.Text = user.street.Replace("\"", "");
+            c3.Text = user.city.Replace("\"", "");
+            c4.Text = user.state.Replace("\"", "");
 
             button1.Content = "Save";
+            userNameLabel.Visibility = Visibility.Hidden;
+            username.Visibility = Visibility.Hidden;
+            passwordLabel.Visibility = Visibility.Hidden;
+            password.Visibility = Visibility.Hidden;
            
 
         }
@@ -70,6 +86,7 @@ namespace WpfBrowserApplication1
             {
                 if (registeredSuccessfully())
                 {
+                    Application.Current.Properties["user"] = null;
                     Uri pageURI = new Uri("page1.xaml", UriKind.Relative);
                     this.NavigationService.Navigate(pageURI);
                 }
@@ -97,9 +114,15 @@ namespace WpfBrowserApplication1
             var usernam =  App.Current.Properties["user"]?? username.Text;
             var pass = String.IsNullOrEmpty(password.Password) ? "n" : password.Password;
             var name = c1.Text;
+            var zip = c5.Text;
+            var dob = datePicker1.Text.Replace("/","-");
+            var phone = c6.Text;
+            var street = c2.Text;
+            var city = c3.Text;
+            var state = c4.Text;
 
             WebClient webClient = new WebClient();
-            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveUser&u=" + usernam + "&p=" + pass + "&n=" + name)).ToString();
+            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveUser&u=" + usernam + "&p=" + pass + "&n=" + name + "&z=" + zip + "&d=" + dob + "&phone=" + phone + "&street=" + street + "&city=" + city + "&state=" + state)).ToString();
 
             var item = result == "\"saved\"";
 

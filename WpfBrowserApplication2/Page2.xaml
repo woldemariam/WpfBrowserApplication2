@@ -59,8 +59,8 @@
         <DatePicker Height="25" HorizontalAlignment="Left" Margin="140,30,0,0" Grid.Column="1" Grid.Row="7" TabIndex="1" Name="datePicker2"
             VerticalAlignment="Top" Width="163" SelectedDateChanged="datePicker2_SelectedDateChanged" />
         <Button Content="Next" Grid.Column="2" Height="20" HorizontalAlignment="Left" Margin="68,104,0,0" Name="button1" VerticalAlignment="Top" Width="74" Click="button1_Click" Grid.Row="7" Grid.ColumnSpan="3" />
-        <Label Content="Password" Grid.Column="1" Margin="214,68,55,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="UserName" Grid.Column="1" HorizontalAlignment="Left" Margin="10,68,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Name="passwordLabel" Content="Password" Grid.Column="1" Margin="214,68,55,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Name="userNameLabel" Content="UserName" Grid.Column="1" HorizontalAlignment="Left" Margin="10,68,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <TextBox  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="89,68,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="username"/>
         <PasswordBox Grid.Column="1" HorizontalAlignment="Left" Margin="287,71,0,0" Grid.Row="1" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.062,-0.7" Grid.ColumnSpan="4"  Name="password"/>
         <Label Name="registerlabel" Content="" Grid.Column="4" HorizontalAlignment="Left" Margin="81,65,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#FFEA0707"/>
