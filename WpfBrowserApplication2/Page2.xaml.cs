@@ -48,7 +48,12 @@ namespace WpfBrowserApplication1
                    phone = x.Value[5].ToString(),
                    street = x.Value[6].ToString(),
                    city = x.Value[7].ToString(),
-                   state = x.Value[8].ToString()
+                   state = x.Value[8].ToString(),
+                   creditCard = x.Value[9].ToString(),
+                   chk1 = x.Value[10].ToString(),
+                   chk2 = x.Value[11].ToString(),
+                   chk3 = x.Value[12].ToString(),
+                   expiration = x.Value[13].ToString()
                }
 
             );
@@ -59,10 +64,15 @@ namespace WpfBrowserApplication1
             c1.Text = user.name.Replace("\"", "");
             c5.Text = user.zip.Replace("\"", "");
             datePicker1.Text  = user.dob.Replace("\"", "").Replace("-","/");
+            datePicker2.Text = user.expiration.Replace("\"", "").Replace("-", "/");
             c6.Text = user.phone.Replace("\"", "");
             c2.Text = user.street.Replace("\"", "");
             c3.Text = user.city.Replace("\"", "");
             c4.Text = user.state.Replace("\"", "");
+            creditCard.Text = user.creditCard.Replace("\"", "");
+            checkbox.IsChecked = user.chk1.Replace("\"", "") == "1".ToString();
+            checkbox1.IsChecked = user.chk2.Replace("\"", "") == "1".ToString();
+            checkbox2.IsChecked = user.chk3.Replace("\"", "") == "1".ToString();
 
             button1.Content = "Save";
             userNameLabel.Visibility = Visibility.Hidden;
@@ -120,9 +130,14 @@ namespace WpfBrowserApplication1
             var street = c2.Text;
             var city = c3.Text;
             var state = c4.Text;
+            var credit = creditCard.Text;
+            var chk1 = checkbox.IsChecked==true?1:0;
+            var chk2 = checkbox1.IsChecked == true ? 1 : 0;
+            var chk3 = checkbox2.IsChecked == true ? 1 : 0;
+            var expiration = datePicker2.Text.Replace("/", "-");
 
             WebClient webClient = new WebClient();
-            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveUser&u=" + usernam + "&p=" + pass + "&n=" + name + "&z=" + zip + "&d=" + dob + "&phone=" + phone + "&street=" + street + "&city=" + city + "&state=" + state)).ToString();
+            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveUser&u=" + usernam + "&p=" + pass + "&n=" + name + "&z=" + zip + "&d=" + dob + "&phone=" + phone + "&street=" + street + "&city=" + city + "&state=" + state + "&credit=" + credit + "&chk1=" + chk1 + "&chk2=" + chk2 + "&chk3=" + chk3 + "&expiration=" + expiration)).ToString();
 
             var item = result == "\"saved\"";
 
