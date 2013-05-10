@@ -121,6 +121,23 @@ namespace WpfBrowserApplication1
                 }
             }
 
+            WebClient webClient = new WebClient();
+            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=GetAllUsers")).ToList();
+
+            var db = result.Select(
+               x => new
+               {
+                   user = x.Value[0].ToString().Replace("\"", "")
+               }
+
+            );
+
+            if (db.Select(x => x.user).Contains(username.Text))
+            {
+                registerlabel.Content = "That username is not availabe.";
+                return false;
+            }
+
             var usernam =  App.Current.Properties["user"]?? username.Text;
             var pass = String.IsNullOrEmpty(password.Password) ? "n" : password.Password;
             var name = c1.Text;
@@ -136,10 +153,10 @@ namespace WpfBrowserApplication1
             var chk3 = checkbox2.IsChecked == true ? 1 : 0;
             var expiration = datePicker2.Text.Replace("/", "-");
 
-            WebClient webClient = new WebClient();
-            var result = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveUser&u=" + usernam + "&p=" + pass + "&n=" + name + "&z=" + zip + "&d=" + dob + "&phone=" + phone + "&street=" + street + "&city=" + city + "&state=" + state + "&credit=" + credit + "&chk1=" + chk1 + "&chk2=" + chk2 + "&chk3=" + chk3 + "&expiration=" + expiration)).ToString();
+            WebClient webClient1 = new WebClient();
+            var result1 = JsonValue.Parse(webClient.DownloadString("http://hot100number1s.com/wpf/test.php?method=SaveUser&u=" + usernam + "&p=" + pass + "&n=" + name + "&z=" + zip + "&d=" + dob + "&phone=" + phone + "&street=" + street + "&city=" + city + "&state=" + state + "&credit=" + credit + "&chk1=" + chk1 + "&chk2=" + chk2 + "&chk3=" + chk3 + "&expiration=" + expiration)).ToString();
 
-            var item = result == "\"saved\"";
+            var item = result1 == "\"saved\"";
 
             return true;
 

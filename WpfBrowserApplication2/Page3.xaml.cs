@@ -1128,7 +1128,10 @@ namespace WpfBrowserApplication1
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
-            saveHistory();
+            if (!String.IsNullOrEmpty(selected2))
+            {
+                saveHistory();
+            }
 
 
             Uri pageURI = new Uri("page4.xaml", UriKind.Relative);
